@@ -28,7 +28,7 @@ StringBuffer *strbuf_make_cap(size_t capacity)
 
 StringBuffer *strbuf_make_from(const char *str)
 {
-    int len = 0;
+    size_t len = 0;
     char c;
     const char *cptr = str;
 
@@ -59,7 +59,7 @@ void strbuf_append_char(StringBuffer *sb, char c)
 {
     if (sb->length + 2 > sb->capacity)
     {
-        int nCapacity = sb->capacity * 2;
+        size_t nCapacity = sb->capacity * 2;
         char *ntext = (char *)realloc(sb->text, nCapacity);
 
         if (ntext == NULL)
@@ -78,7 +78,7 @@ void strbuf_append_char(StringBuffer *sb, char c)
 
 void strbuf_append_str(StringBuffer *sb, const char *str)
 {
-    int len = 0;
+    size_t len = 0;
     char c;
     const char *cptr = str;
 
@@ -87,11 +87,11 @@ void strbuf_append_str(StringBuffer *sb, const char *str)
         len++;
     }
 
-    int requiredLength = sb->length + len + 1;
+    size_t requiredLength = sb->length + len + 1;
 
     if (requiredLength > sb->capacity)
     {
-        int nCapacity = sb->capacity * 2;
+        size_t nCapacity = sb->capacity * 2;
 
         while (requiredLength > nCapacity)
         {

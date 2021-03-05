@@ -4,7 +4,7 @@
 typedef struct
 {
     char *text;
-    int length;
+    size_t length;
     size_t capacity;
 } StringBuffer;
 
