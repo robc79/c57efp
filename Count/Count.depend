@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1611928926 source:d:\repos\hello\count\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
