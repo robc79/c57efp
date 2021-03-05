@@ -7,13 +7,13 @@ int main(int argc, char* argv[])
     StringBuffer *buf = strbuf_make_from("Hello, world!");
 
     printf("Text: %s\n", buf->text);
-    printf("Length: %lu\n", buf->length);
+    printf("Length: %d\n", buf->length);
     printf("Capacity: %lu\n", buf->capacity);
 
-    strbuf_clear(buf);
+    strbuf_append_str(buf, " Nice to meet you.");
 
     printf("Text: %s\n", buf->text);
-    printf("Length: %lu\n", buf->length);
+    printf("Length: %d\n", buf->length);
     printf("Capacity: %lu\n", buf->capacity);
 
     free(buf);

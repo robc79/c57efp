@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1614694870 source:d:\repos\c57efp\strbuf\main.c
+1614972150 source:d:\repos\c57efp\strbuf\main.c
 	<stdio.h>
 	<stdlib.h>
 	"strbuf.h"
 
-1614695868 source:d:\repos\c57efp\strbuf\strbuf.c
+1614973150 source:d:\repos\c57efp\strbuf\strbuf.c
 	<stdlib.h>
 	<string.h>
 	"strbuf.h"
