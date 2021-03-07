@@ -28,15 +28,7 @@ StringBuffer *strbuf_make_cap(size_t capacity)
 
 StringBuffer *strbuf_make_from(const char *str)
 {
-    size_t len = 0;
-    char c;
-    const char *cptr = str;
-
-    while ((c = *cptr++) != '\0')
-    {
-        len++;
-    }
-
+    size_t len = strlen(str);
     StringBuffer * sb = (StringBuffer *)malloc(sizeof(StringBuffer));
     sb->length = len;
     sb->capacity = len + 1;
@@ -78,15 +70,7 @@ void strbuf_append_char(StringBuffer *sb, char c)
 
 void strbuf_append_str(StringBuffer *sb, const char *str)
 {
-    size_t len = 0;
-    char c;
-    const char *cptr = str;
-
-    while ((c = *cptr++) != '\0')
-    {
-        len++;
-    }
-
+    size_t len = strlen(str);
     size_t requiredLength = sb->length + len + 1;
 
     if (requiredLength > sb->capacity)
